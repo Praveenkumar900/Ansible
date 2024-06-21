@@ -7,3 +7,9 @@ Ansible Galaxy > Search for Docker >
 
 #To install an existing role from Ansible Galaxy on our Control Node
 ansible-galaxy role install lean_delivery.jenkins   #Jenkins installation and configuration
+
+Setup Vault:
+Create a password for vault
+openssl rand -base64 2048 > vault.pass
+Add your AWS credentials using the below vault command
+ansible-vault edit group_vars/all/pass.yml --vault-password-file vault.pass
