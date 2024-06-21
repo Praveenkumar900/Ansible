@@ -14,3 +14,6 @@ Note: defaults has less priority than vars. SO, the Ec2 instance of "t2.medium" 
 Eg3: We can pass variblaes as Env Varibales as below manually:
 
 ansible-playbook -i inventory.ini ec2_create.yaml --vault-password-file vault.pass -e type=t2.micro
+
+Eg4: We can directly declare Varibales in Playbook as well:
+
