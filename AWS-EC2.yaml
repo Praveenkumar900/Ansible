@@ -1,0 +1,6 @@
+Prerquisites:
+#1. We need AWS Collections to perform actions on AWS
+# > ansible-galaxy collection install amazon.aws --force
+#2. We need boto3 for Ansible to talk to AWS API
+# > sudo apt install python3-boto3
+
