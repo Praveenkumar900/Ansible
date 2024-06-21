@@ -16,4 +16,6 @@ openssl rand -base64 2048 > vault.pass
 
 Add your AWS credentials using the below vault command
 
-ansible-vault edit group_vars/all/pass.yml --vault-password-file vault.pass
+ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass
+
+In this file, add AWS Access_Key and Secret_Key
