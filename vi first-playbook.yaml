@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true	#Run as Root user
+  tasks:
+    - name: Install apache httpd	#Install Apache Server
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: yes
+    - name: Copy file with owner and permissions	#Take html file and put it in  # /var/www/html
+      ansible.builtin.copy:
+        src: index.html
+        dest: /var/www/html
+        owner: root
+        group: root
+        mode: '0644'
