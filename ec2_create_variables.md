@@ -8,3 +8,5 @@ Eg2: /role/vars/main.yaml --> type: t2.medium
 
 This value we can refer in playbook as below:
 instance_type: "{{ type }}"
+
+Note: defaults has less priority than vars. SO, the Ec2 instance of "t2.medium" will be created
