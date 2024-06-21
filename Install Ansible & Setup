@@ -1,0 +1,20 @@
+# Create 3 EC2 Instances [1 Control Node & 2 Manage Nodes]
+# Install Ansible on master only
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+ansible --version
+
+#Install python3 on all nodes if not installed
+sudo apt install python3
+python3 --version
+
+# On both Manage Node
+Go to the file: sudo vim /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+Update PasswordAuthentication yes
+Restart SSH → sudo systemctl restart ssh
+Create Password for Ubuntu User:
+sudo passwd ubuntu
+
+#
