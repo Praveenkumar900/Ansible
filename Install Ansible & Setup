@@ -17,4 +17,19 @@ Restart SSH → sudo systemctl restart ssh
 Create Password for Ubuntu User:
 sudo passwd ubuntu
 
-#
+#On Control Node
+ssh-keygen
+cd ~/.ssh/
+ls
+ssh-copy-id -i ~/.ssh/id_ed25519.pub ubuntu@3.82.50.36
+ssh 'ubuntu@3.82.50.36'
+exit
+#Similarly copy "id_ed25519.pub" to other Manage Node 
+
+#Ansible Inventory: define the list of Manage Nodes.
+> vi inventory.ini
+ubuntu@34.227.95.159
+ubuntu@3.82.50.36
+
+#Check
+ansible -i inventory.ini -m ping all
