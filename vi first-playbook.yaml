@@ -15,3 +15,5 @@
         group: root
         mode: '0644'
 #To run this playbook --> ansible-playbook -i inventory.ini first-playbook.yaml
+#Validation on Manage Nodes
+#sudo systemctl status apache2
