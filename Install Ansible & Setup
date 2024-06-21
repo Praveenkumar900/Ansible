@@ -33,3 +33,12 @@ ubuntu@3.82.50.36
 
 #Check
 ansible -i inventory.ini -m ping all
+
+#Grouping servers in inventory file
+[app]
+ubuntu@34.227.95.159
+[db]
+ubuntu@3.82.50.36
+
+#Check
+ansible -i inventory.ini -m ping db
