@@ -6,7 +6,7 @@ Prerquisites:
 
 ---
 - hosts: localhost   #We are runing on same machine
-  connetion: local   #We are running playbook on same machine
+  connection: local   #We are running playbook on same machine
   tasks:
   - name: start an instance with a public IP address
     amazon.aws.ec2_instance:
