@@ -9,6 +9,7 @@ Ansible Galaxy > Search for Docker >
 ansible-galaxy role install lean_delivery.jenkins   #Jenkins installation and configuration
 
 Setup Vault:
+
 Create a password for vault
 
 openssl rand -base64 2048 > vault.pass
