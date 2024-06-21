@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: all  #To run on all Manage Nodes
   become: true	#Run as Root user
   tasks:
     - name: Install apache httpd	#Install Apache Server
