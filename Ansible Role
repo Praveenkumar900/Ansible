@@ -1,0 +1,17 @@
+Consider a Playbook with multiple vars, tasks, handlers, metadata with over 2000 lines. This will be less readable.
+We can split different sections and put them in different folders and within these folders we can have yaml’s.
+Role: These folders are placed under one umbrella called Role.
+Ansible will create the entire folder structure for us using this command:
+> ansible-galaxy role init test   #Creating Role
+
+#Ansible Galaxy:
+Using Ansible Galaxy, we can create the Roles, upload them here and share them within the Organization.
+
+#Folders inside Role:
+Vars → To place Variables
+Tasks → We can put all our tasks here
+Meta → Questions, Approach, Versions etc.,
+Handlers → Are Tasks but are executed only upon a particular Action.
+Defaults → variables (Default Values when we don’t provide any Vars)
+Files → We can put all the files we want to copy to Manage Nodes.
+Templates → Dynamic Files
