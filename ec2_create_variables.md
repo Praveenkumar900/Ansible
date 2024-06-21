@@ -17,3 +17,8 @@ ansible-playbook -i inventory.ini ec2_create.yaml --vault-password-file vault.pa
 
 Eg4: We can directly declare Varibales in Playbook as well:
 
+tasks:
+  - name: start an instance with a public IP address
+    vars:
+      type: t2.micro
+    amazon.aws.ec2_instance:
