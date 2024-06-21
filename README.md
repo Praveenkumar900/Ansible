@@ -5,3 +5,5 @@ Here, the complexity of Ansible Playbook will be high as we have to consider all
 
 Ansible Galaxy > Search for Docker > 
 
+#To install an existing role from Ansible Galaxy on our Control Node
+ansible-galaxy role install lean_delivery.jenkins   #Jenkins installation and configuration
