@@ -14,3 +14,4 @@
         owner: root
         group: root
         mode: '0644'
+#To run this playbook --> ansible-playbook -i inventory.ini first-playbook.yaml
