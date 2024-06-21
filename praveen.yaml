@@ -1,0 +1,15 @@
+
+name: ‘praveen’	#String
+age: 28		#Number
+working: True	#Booleancat 
+tasks: 		#List
+  - youtube content creation
+  - work
+  - take care of home
+  - workout
+address: 		#Directory
+  street: Drivers Colony
+  city: ATP
+  state: AP
+
+#Use YAML Lint to check correctness
