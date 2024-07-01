@@ -4,7 +4,7 @@
   tasks:
   - name: Create EC2 Instances
     amazon.aws.ec2_instance:
-      name: "ansible-instance"
+      name: "{{ item.name }}"
       key_name: "july1"
       # vpc_subnet_id: subnet-013744e41e8088axx
       instance_type: t2.micro
@@ -14,8 +14,8 @@
       aws_secret_key: "{{ec2_secret_key}}"  # From vault as defined      
       network:
         assign_public_ip: true
-      image_id: "{{ item }}"
+      image_id: "{{ item.image }}"
    loop: 
-     - "ami-01b799c439fd5516a"
-     - "ami-04b70fa74e45c3917"
-     - "ami-04b70fa74e45c3917"
+     - { image: "ami-01b799c439fd5516a", "manage-node-1" }
+     - { image: "ami-04b70fa74e45c3917", "manage-node-2" }
+     - { image: "ami-04b70fa74e45c3917", "manage-node-3" }
