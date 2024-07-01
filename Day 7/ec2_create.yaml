@@ -1,1 +1,21 @@
-
+---
+- hosts: localhost   #We are runing on same machine
+  connection: local   #We are running playbook on same machine
+  tasks:
+  - name: Create EC2 Instances
+    amazon.aws.ec2_instance:
+      name: "ansible-instance"
+      key_name: "july1"
+      # vpc_subnet_id: subnet-013744e41e8088axx
+      instance_type: t2.micro
+      security_group: default
+      region: us-east-1
+      aws_access_key: "{{ec2_access_key}}"  # From vault as defined
+      aws_secret_key: "{{ec2_secret_key}}"  # From vault as defined      
+      network:
+        assign_public_ip: true
+      image_id: "{{ item }}"
+   loop: 
+     - "ami-01b799c439fd5516a"
+     - "ami-04b70fa74e45c3917"
+     - "ami-04b70fa74e45c3917"
