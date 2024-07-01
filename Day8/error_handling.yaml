@@ -13,9 +13,9 @@
       ignore_errors: yes 
     - name: Check if docker is installed
       ansible.builtin.command: docker --version
-      register: output
+      register: output # To store the previous command output value
       ignore_errors: yes    
-    - ansible.builtin.debug:
+    - ansible.builtin.debug:  #To print the value stored in "output"
         var: output
     - name: Install docker
       ansible.builtin.apt:
